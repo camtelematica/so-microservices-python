@@ -361,14 +361,14 @@ $ source ~/.bashrc
 Algunos comandos útiles son:
 
 
-| Comando | Descripción | 
+| Comando | Descripción |
 |---	|---	|
 | mkvirtualenv test	| Crea el ambiente virtual llamado test	|
 | deactivate	| Si un ambiente virtual esta activo, lo desactiva	|
 | workon test	| Activa el ambiente virtual llamado test	|
 | pip install Flask	| Si el ambiente esta activo, instala la libreria Flask en el ambiente	|
 | rmvirtualenv test	| Elimina el ambiente virtual llamado test	|
-| ls ~/.virtualenvs/ | Lista los ambientes virtuales | 
+| ls ~/.virtualenvs/ | Lista los ambientes virtuales |
 
 ### Actividades
 
@@ -379,6 +379,8 @@ Algunos comandos útiles son:
 3. Define un contrato para un servicio que permita realizar el escaneo de los puertos abiertos en una red desde un servidor. Define e implemente como mínimo las peticiones para GET (/scans,/scans/ip_address).
 
 4. Configure los servicios web implementados de tal forma que se ejecuten desde el inicio del sistema operativo.
+
+5. Adicione autentación por medio de tokens a los endpoints desarrollados
 
 **Nota:** Se sugiere la instalación de nmap en el servidor. Tenga en cuenta que nmap cuenta con opciones para generar la salida en xml pero no json.
 

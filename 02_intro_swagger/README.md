@@ -187,12 +187,6 @@ Para ejecutar el script ejecute el siguiente comando
 
 Abra un navegador en la dirección **http://127.0.0.1:8088**, podrá visualizar la documentación para los endpoints implementados. Cancele la ejecución del script presionando la combinación de teclas **CTRL+C**.
 
-### Estructura de directorios
-En la siguiente URL puede encontrar un ejemplo y un repositorio de github que puede tomar como modelo para la organización de los archivos que conforman un proyecto en flask
-
-http://michal.karzynski.pl/blog/2016/06/19/building-beautiful-restful-apis-using-flask-swagger-ui-flask-restplus/  
-https://github.com/postrational/rest_api_demo
-
 ### Actividades
 1. Investigue acerca de la iniciativa OpenAPI, ¿Cúal es su objetivo?, ¿Quienes la conforman?, ¿Cúal es su relación con swagger?
 2. Adicione endpoints de ejemplos para el manejo de parámetros en el path **/users/<username:string>** y parámetros tipo query **/users?group=root**
