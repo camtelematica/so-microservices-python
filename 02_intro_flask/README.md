@@ -13,43 +13,16 @@ Correo: daniel.barragan at correo.icesi.edu.co
 ### Introducción
 Flask es un micro web framework escrito en Python y basado en la especificación WSGI de Werkzeug y el motor de templates Jinja2. Tiene licencia BSD.
 
-### Instalación
-
-Para la ejecución de los ejemplos se emplearán entornos virtuales.
-
-```
-# cd /tmp
-# wget https://bootstrap.pypa.io/get-pip.py
-# python get-pip.py
-# pip install virtualenv
-```
-
-### Desarrollo
-
-#### Crear un ambiente virtual
-
-Cree un ambiente virtual
-
-```
-# su python_user
-$ cd ~/
-$ mkdir envs
-$ cd envs
-$ virtualenv flask_env
-```
-
-#### Activar un ambiente virtual
-
-Active el ambiente virtual creado
-
-```
-$ cd ~/envs
-$ . flask_env/bin/activate
-```
-
 #### Instalación de Flask
 
-Con el ambiente activo, instale la libreria Flask
+Cree un ambiente de nombre flask_environment, si no se activa automáticamente, actívelo.
+
+```
+$ mkvirtualenv flask_environment
+$ workon flask_environment
+```
+
+Instale la libreria Flask
 
 ```
 $ pip install Flask
@@ -326,49 +299,6 @@ Prueba de la uri con POST y enviando un JSON
 ![][10]
 
 Puede consultar el código fuente del ejercicio en el repositorio de github del curso
-
-### Anexos
-
-#### Wrapper para virtualenv (CentOS7)
-
-Virtualenvwrapper es un wrapper para virtualenv el cual permite la activación de ambientes virtuales desde
-cualquier lugar del path del sistema operativo
-
-```
-# pip install virtualenvwrapper
-# su python_user
-```
-
-Para iniciar virtualenvwrapper al autenticarse como el usuario python_user editamos el archivo **.bashrc**
-
-```
-$ vi ~/.bashrc
-```
-
-Y adicionamos las siguientes líneas al final del archivo
-
-```
-export WORKON_HOME=~/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
-```
-
-Para activar los cambios sin necesidad de cerrar la sesión del usuario python_user se debe ejecutar el siguiente comando
-
-```
-$ source ~/.bashrc
-```
-
-Algunos comandos útiles son:
-
-
-| Comando | Descripción |
-|---	|---	|
-| mkvirtualenv test	| Crea el ambiente virtual llamado test	|
-| deactivate	| Si un ambiente virtual esta activo, lo desactiva	|
-| workon test	| Activa el ambiente virtual llamado test	|
-| pip install Flask	| Si el ambiente esta activo, instala la libreria Flask en el ambiente	|
-| rmvirtualenv test	| Elimina el ambiente virtual llamado test	|
-| ls ~/.virtualenvs/ | Lista los ambientes virtuales |
 
 ### Actividades
 
