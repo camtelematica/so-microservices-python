@@ -52,6 +52,14 @@ Practique los comandos que se muestran en la tabla a continuación
 | rmvirtualenv test	| Elimina el ambiente virtual llamado test	|
 | lsvirtualenv | Lista los ambientes virtuales |
 
+### FAQ
+
+* Si tiene problemas con la iniciación de virtualenvwrapper debido a que este busca el interprete de python en /usr/bin/python
+cree la siguiente variable de ambiente antes de ejecutar el comando source ~/.local/bin/virtualenvwrapper.sh
+```
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.4
+```
+
 ### Actividades
 
 * Cree al menos tres ambientes que tengan la misma librería de python pero en versiones distintas
