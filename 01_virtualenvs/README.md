@@ -15,7 +15,7 @@ Virtualenvwrapper es un wrapper para virtualenv el cual permite la activación d
 ### Requerimientos
 Maquina Virtual de CentOS7
 
-### Instalación
+### Instalación CentOS7 y Python2
 Ingrese los comandos que se describen a continuación
 
 ```
@@ -32,11 +32,44 @@ Para iniciar virtualenvwrapper al autenticarse como el usuario microservices edi
 ```
 $ vi ~/.bashrc
 export WORKON_HOME=~/.virtualenvs
-source /home/microservices/.local/bin/virtualenvwrapper.sh
+source ~/.local/bin/virtualenvwrapper.sh
 ```
 Para activar los cambios sin necesidad de cerrar la sesión del usuario python_user se debe ejecutar el siguiente comando
 ```
 $ source ~/.bashrc
+```
+
+### Instalación CentOS7 y Python3
+
+Estos son los pasos para la instalación
+```
+# yum install epel-release
+# yum install python34
+# yum install python34-pip
+# adduser flaskdev
+# passwrd flaskdev
+# su flaskdev
+$ cd ~/
+$ pip install --user virtualenvwrapper
+$ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+$ vi ~/.bashrc
+# User specific aliases and functions
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
+source ~/.local/bin/virtualenvwrapper.sh
+$ source ~/.bashrc
+```
+
+Con estos pasos puede validar la instalación
+```
+$ mkvirtualenv flaskdev
+$ pip install flask
+$ pip install pyyaml
+$ pip install pygithub
+$ deactivate
+$ workon flaskdev
 ```
 
 ### Desarrollo
@@ -51,14 +84,6 @@ Practique los comandos que se muestran en la tabla a continuación
 | pip install Flask	| Si el ambiente esta activo, instala la libreria Flask en el ambiente	|
 | rmvirtualenv test	| Elimina el ambiente virtual llamado test	|
 | lsvirtualenv | Lista los ambientes virtuales |
-
-### FAQ
-
-* Si tiene problemas con la iniciación de virtualenvwrapper debido a que este busca el interprete de python en /usr/bin/python
-cree la siguiente variable de ambiente antes de ejecutar el comando source ~/.local/bin/virtualenvwrapper.sh
-```
-VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.4
-```
 
 ### Actividades
 
